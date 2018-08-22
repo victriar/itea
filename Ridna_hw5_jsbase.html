@@ -1,0 +1,83 @@
+<!-- Ридна В.А. ДЗ №5-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ridna_hw5</title>
+</head>
+<body>
+<style>
+
+    body {
+        display: flex;
+        flex-direction: row;
+    }
+
+    div {
+        width: 33%;
+        padding: 20px;
+    }
+
+    #pictureHere {
+        height: 300px;
+        width: 300px;
+    }
+
+</style>
+
+<div>
+    <form>
+        <h3>Задание 1</h3>
+        <input type="button" value='Показать картинку' onclick='addImage()'>
+        <p id="pictureHere"></p>
+    </form>
+</div>
+<div>
+    <form>
+        <h3>Задание 2</h3>
+        <input type="text" id="myInput1" name="input" size="30"/><br/>
+        <input type="text" id="myInput2" name="input" size="30"/><br/>
+        <input type="button" value="Добавить текст" onclick="pasteText()"/>
+        <p id="paste1"></p>
+        <p id="paste2"></p>
+    </form>
+</div>
+<div>
+    <h3>Задание 3</h3>
+    <input type="button" value="Изменить абзацы" onclick="changeP()"/>
+    <h2>Заголовок, не поменяется.</h2>
+    <p class="changed">Абзац, поменяется.</p>
+    <p class="changed">Абзац, поменяется.</p>
+    <p class="changed">Абзац, поменяется.</p>
+</div>
+
+<script>
+    // 1. У вас есть форма с кнопкой и элемент параграф (тег p)…Нажав на кнопку у вас в
+    // параграфе появляется какая то картинка
+    function addImage() {
+        document.getElementById("pictureHere").innerHTML = "<img src='http://vsetutpl.com/uploads/content/2393/article/samovchytel-polskoyi-movy-20909.png'/>"
+    }
+
+    // 2. У вас есть форма с двумя элементами ввода текста, кнопка и два тега p….Нажав
+    // на кнопку, у вас в один параграф заноситься текст , который которые ввели из
+    // одного элемента и в другой параграф заноситься информация из другого
+    // элемента ввода
+
+    function pasteText() {
+        var input1 = document.getElementById('myInput1');
+        var input2 = document.getElementById('myInput2');
+        document.getElementById('paste1').innerHTML = input1.value;
+        document.getElementById('paste2').innerHTML = input2.value;
+    }
+
+    // 3.Дан HTML код (см. под задачей). Поменяйте содержимое абзацев на их порядковый номер в коде.
+    function changeP(){
+        var p = document.getElementsByClassName('changed');
+        for (var i = 0; i < p.length; i++) {
+            p[i].innerHTML = i+1;
+        }
+    }
+
+</script>
+</body>
+</html>

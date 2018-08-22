@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Создать объект Point, содержащий два свойства: "x" и "y" — координаты точки, и метод GetQuadrant, вычисляющий,
+    //     в каком квадранте в декартовой системе координат находится данная точка.
+    //     Протестируйте данный объект, изменяя значения его координат, и повторно вызавая метод GetQuadrant.
+    // var point = new Object;
+    // point.x = +prompt('Enter x');
+    // point.y = +prompt('Enter y');
+    // point.getQuadrant = function () {
+    //     if (point.x > 0 && point.y > 0) {
+    //         document.write('I четверть');
+    //     } else if (point.x < 0 && point.y > 0) {
+    //         document.write('II четверть');
+    //     } else if (point.x < 0 && point.y < 0) {
+    //         document.write('III четверть');
+    //     } else if (point.x > 0 && point.y < 0) {
+    //         document.write('VI четверть');
+    //     }
+    //     else {
+    //         document.write('Проверьте правильность ввода');
+    //     }
+    // }
+    // point.getQuadrant()
+
+    // 2. Создать объект Calculator, который должен содержать методы для расчета суммы, разности, произведения и частного двух чисел.
+    //     Протестировать данный объект, принимая от пользователя значения двух операндов и знак операции.
+    //     В зависимости от принятого знака операции, вызвать соответствующий метод.
+    // var Calculator = new Object;
+    // Calculator.x = +prompt('Enter x');
+    // Calculator.sign = prompt('Enter sign');
+    // Calculator.y = +prompt('Enter y');
+    //
+    // Calculator.getValue = function () {
+    //     if (isNaN(Calculator.x) && isNaN(Calculator.y)) {
+    //         return 'Проверьте правильность ввода чисел'
+    //     }
+    //     else {
+    //         switch (Calculator.sign) {
+    //             case "+":
+    //                 return Calculator.x + Calculator.y;
+    //                 break;
+    //             case "-":
+    //                 return Calculator.x - Calculator.y;
+    //                 break;
+    //             case "*":
+    //                 return Calculator.x * Calculator.y;
+    //                 break;
+    //             case "/":
+    //                 return Calculator.x / Calculator.y;
+    //                 break;
+    //             default:
+    //                 return "Проверьте правильность ввода знака";
+    //         }
+    //     }
+    // }
+    // document.write(Calculator.getValue());
+
+    // 3. Создать массив, который будет хранить в себе информацию о сотрудниках предприятия. Каждый элемент масива — объект,
+    //     содержащий свойства: name, sName, age, occupation, и метод show, который выводит всю информацию о пользователе.
+    //     Реализовать заполнение массива пользователем. По окончанию заполнения — вывести информацию о сотрудниках.
+
+    // var workersList = [];
+    // var counter = 0;
+    //
+    // do {
+    //     var newWorker = new Object();
+    //     counter += 1;
+    //     newWorker.name = prompt('Введите имя нового сотрудника');
+    //     newWorker.sName = prompt('Введите фамилию нового сотрудника');
+    //     newWorker.age = +prompt('Введите возраст нового сотрудника');
+    //     newWorker.occupation = prompt('Введите должность нового сотрудника');
+    //     newWorker.show = function () {
+    //         document.write("Сотрудник : " + counter + " Имя: " + this.name + " Фамилия:" + this.sName + " Возраст: " + this.age + " Должность: " + this.occupation + '<br>');
+    //     };
+    //     workersList.push(newWorker);
+    //     newWorker.show();
+    //     var ques = confirm('Добавить нового сотрудника?')
+    // }
+    // while (ques === true);
+
+    // 4. Для предыдущего задания создайте функцию, которая будет принимать в себя массив объектов-сотрудников, и каждому из объектов
+    // будет добавлять новое свойство "salary", хранящее зарплату сотрудника.
+    //     Зарплата расчитывается, исходя из значения свойства "occupation" следующим образом:
+    //     • "director" — 3000;
+    //        • "manager" — 1500;
+    //        • "programmer" — 2000;
+    //        • для остальных значений — 1000.
+    // После выполнения функции — вывести информацию о сотрудниках.
+    //массив для проверки
+    // var workersList = [
+    //     {
+    //         name: 'Alina',
+    //         sName: 'Ivanova',
+    //         age: 34,
+    //         occupation: 'director',
+    //         show: function () {
+    //             document.write(" Имя: " + this.name + " Фамилия:" + this.sName + " Возраст: " + this.age + " Должность: " + this.occupation + '<br>');
+    //         }
+    //     },
+    //     {
+    //         name: 'Denis',
+    //         sName: 'Volkov',
+    //         age: 24,
+    //         occupation: 'manager',
+    //         show: function () {
+    //             document.write(" Имя: " + this.name + " Фамилия:" + this.sName + " Возраст: " + this.age + " Должность: " + this.occupation + '<br>');
+    //         }
+    //     },
+    //     {
+    //         name: 'Ivan',
+    //         sName: 'Yanchuk',
+    //         age: 26,
+    //         occupation: 'programmer',
+    //         show: function () {
+    //             document.write(" Имя: " + this.name + " Фамилия:" + this.sName + " Возраст: " + this.age + " Должность: " + this.occupation + '<br>');
+    //         }
+    //     },
+    //     {
+    //         name: 'Yana',
+    //         sName: 'Mazurok',
+    //         age: 22,
+    //         occupation: 'recruiter',
+    //         show: function () {
+    //             document.write(" Имя: " + this.name + " Фамилия:" + this.sName + " Возраст: " + this.age + " Должность: " + this.occupation + '<br>');
+    //         }
+    //     }
+    // ];
+    // for (i = 0; i < workersList.length; i++) {
+    //     workersList[i].show();
+    // }
+
+    // function calcSalary(arr) {
+    //     let counter = 0;
+    //     for (i = 0; i < arr.length; i++) {
+    //         counter += 1;
+    //         if (arr[i] instanceof Object && 'occupation' in arr[i]) {
+    //             switch (arr[i].occupation) {
+    //                 case "director":
+    //                     arr[i].salary = 3000;
+    //                     break;
+    //                 case "manager":
+    //                     arr[i].salary = 1500;
+    //                     break;
+    //                 case "programmer":
+    //                     arr[i].salary = 2000;
+    //                     break;
+    //                 default:
+    //                     arr[i].salary = 1000;
+    //             }
+    //         }
+    //         document.write(' Зарплата сотрудника № ' + counter + ' : ' + arr[i].salary + '<br>');
+    //     }
+    //     return arr;
+    // }
+    //
+    // calcSalary(workersList);
+
+
+    // 5. Для задания 3 создать метод, позволяющий отсортировать массив сотрудников по одному из свойств: name, sName, age, occupation, salary.
+    //     Параметр для сортировки принимается от пользователя.
+    //     После выполнения функции — вывести информацию о сотрудниках.
+
+    // var sort = prompt('Введите параметр для сортировки массива сотрудников? \n Имя\n Фамилия\n Возраст\n Должность\n Зарплата').toLowerCase();
+    // document.write('<hr>');
+    // document.write('Результат сортировки ' + '<br>')
+    // switch (sort) {
+    //     case "имя":
+    //         compareProperty(workersList, 1);
+    //         break;
+    //     case "фамилия":
+    //         compareProperty(workersList, 2);
+    //         break;
+    //     case "возраст":
+    //         compareProperty(workersList, 3);
+    //         break;
+    //     case "должность":
+    //         compareProperty(workersList, 4);
+    //         break;
+    //     case "зарплата":
+    //         compareProperty(workersList, 6);
+    //         break;
+    //     default:
+    //         alert('Проверьте правильность ввода')
+    // }
+    //
+    // function compareProperty(originalArray, serialNumber) {
+    //     var arrayForSorting = [];
+    //     var len=originalArray.length;
+    //     for (var i = 0; i < len; i++) {
+    //         var counter = 0;
+    //         for (let key in originalArray[i]) {
+    //             counter += 1;
+    //             if (counter === serialNumber) {
+    //                 arrayForSorting.push(originalArray[i][key]);
+    //             }
+    //         }
+    //     }
+    //     var result = arrayForSorting.sort();
+    //     document.write(result);
+    // }
+
+
+
+</script>
+</body>
+</html>
